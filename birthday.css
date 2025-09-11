@@ -1,0 +1,132 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #fcb69f 0%, #a1c4fd 100%);
+    min-height: 100vh;
+    overflow: hidden;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+#balloons, #stars, #glitter {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: 1;
+    overflow: hidden;
+}
+
+/* Balloons */
+.balloon {
+    position: absolute;
+    bottom: -100px;
+    width: 40px;
+    height: 60px;
+    border-radius: 20px 20px 20px 20px / 30px 30px 40px 40px;
+    opacity: 0.8;
+    animation: fly 6s linear infinite;
+}
+@keyframes fly {
+    to {
+        transform: translateY(-110vh) scale(1.1);
+    }
+}
+
+/* Stars */
+.star {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: radial-gradient(circle, #fff, rgba(255, 255, 255, 0.5));
+    border-radius: 50%;
+    animation: float 6s linear infinite;
+    opacity: 0.8;
+}
+@keyframes float {
+    0% {
+        transform: translateY(100vh) scale(0.5);
+        opacity: 0.5;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-10vh) scale(1.2);
+        opacity: 0;
+    }
+}
+
+/* Glitter */
+.glitter {
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    background: radial-gradient(circle, #ffd700, rgba(255, 215, 0, 0.5));
+    border-radius: 50%;
+    animation: sparkle 2s linear infinite;
+    opacity: 0.8;
+}
+@keyframes sparkle {
+    0%, 100% {
+        transform: scale(0.5);
+        opacity: 0.5;
+    }
+    50% {
+        transform: scale(1.5);
+        opacity: 1;
+    }
+}
+
+.content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    margin-top: 10vh;
+}
+#birthdayMsg {
+    font-size: 2.5em;
+    color: #a4508b;
+    margin-bottom: 0.5em;
+}
+blockquote {
+    font-size: 1.3em;
+    color: #5f0a87;
+    margin: 1em 0;
+}
+#paragraph {
+    font-size: 1.1em;
+    color: #333;
+    background: rgba(255,255,255,0.7);
+    display: inline-block;
+    padding: 1em 2em;
+    border-radius: 16px;
+}
+.birthday-card {
+    background: none;
+    border-radius: 24px;
+    box-shadow: 0 4px 24px rgba(164,80,139,0.15);
+    padding: 24px 0 8px 0;
+    margin: 0 auto 18px auto;
+    width: 180px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+}
+.cake-img {
+    width: 250px;
+    background: none;
+    box-shadow: none;
+    margin-bottom: 0;
+    filter: drop-shadow(0 2px 8px #cc139455);
+}
+@media (max-width: 600px) {
+    .content {
+        margin-top: 4vh;
+    }
+    #birthdayMsg {
+        font-size: 1.5em;
+    }
+}
