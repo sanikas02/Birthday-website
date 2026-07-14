@@ -14,3 +14,18 @@ This is a fun and interactive **Birthday Celebration Website** where users can e
 3. Enjoy the personalized birthday celebration on the next page!
 
 ## File Structure 📂
+.vscode
+settings.json
+images
+596938125646213412.jpeg
+README.md
+birthday.css
+birthday.html
+birthday.js
+happy-birthday-155461.mp3
+happy-birthday-jazz-171120.mp3
+index.html
+script.js
+stories-ys8qztLjJyg-unsplash.jpg
+style.css
+
