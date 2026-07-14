@@ -29,3 +29,4 @@ script.js
 stories-ys8qztLjJyg-unsplash.jpg
 style.css
 
+##Access with link :  https://sanikas02.github.io/Birthday-website/
